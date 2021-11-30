@@ -1,6 +1,6 @@
 # Docker Compose for Nginx and PHP
 
-This repository contains a little `docker-compose` configuration to start a `Nginx and PHP`.
+This repository contains a little `docker-compose` configuration to start `Nginx and PHP`.
 
 ## Details
 
