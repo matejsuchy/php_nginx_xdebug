@@ -13,6 +13,8 @@ The following versions are used.
 
 The Nginx configuration can be found in `config/nginx/`.
 
+Notice that the Nginx is remapped to 20000 port, you can change that in `docker-compose.yml` file.
+
 You can also set the following environment variables, for example in the included `.env` file:
 
 | Key | Description |
