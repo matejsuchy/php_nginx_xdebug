@@ -1,0 +1,23 @@
+version: '3'
+services:
+    php:
+        # image: 'php:8.0-fpm'
+        build:
+            context: ./docker
+            dockerfile: php.Dockerfile
+        container_name: ${APP_NAME:?err}-php
+        volumes:
+            - './app:/var/www/html'
+            - './xdebug.ini:/usr/local/etc/php/conf.d/xy-xdebug.ini'
+
+    nginx:
+        image: nginx:latest
+        container_name: ${APP_NAME:?err}-nginx
+        ports:
+            - '20000:80'
+        links:
+            - 'php'
+        volumes:
+            - './app:/var/www/html'
+            - './config/nginx:/etc/nginx/conf.d'
+
